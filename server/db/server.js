@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require('cors');
 const db = require("./controllers/DataBaseUtils");
 
-const PORT = 80;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
@@ -29,6 +29,6 @@ app.delete('/models/:id', (req, res) => {
 });
 
 const server = app.listen(PORT, () => {
-  console.log('SERVER STARTED!');
+  console.log('SERVER STARTED! PORT:' + PORT);
 });
 
