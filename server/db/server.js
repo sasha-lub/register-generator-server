@@ -20,8 +20,8 @@ app.post('/models', (req, res) => {
   db.createModel(req.body).then(data => res.send(data));
 });
 
-app.get('/models/:name', (req, res) => {
-  db.findByName(req.params.name).then(data => res.send(data));
+app.get('/models/:id', (req, res) => {
+  db.findById(req.params.id).then(data => res.send(data));
 });
 
 app.delete('/models/:id', (req, res) => {

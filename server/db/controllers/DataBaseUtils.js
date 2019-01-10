@@ -14,8 +14,8 @@ function listModels() {
   return RegisterModel.find();
 }
 
-function findByName(name) {
-  return RegisterModel.findOne({name : name});
+function findById(id) {
+  return RegisterModel.findById(id);
 }
 
 function updateModel(name, data) {
@@ -38,5 +38,5 @@ function createModel(data) {
 }
 
 module.exports = {
-  setUpConnection, listModels, findByName, createModel, deleteModel, updateModel
+  setUpConnection, listModels, findById, createModel, deleteModel, updateModel
 };
