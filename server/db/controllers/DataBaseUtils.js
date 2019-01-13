@@ -31,7 +31,8 @@ function createModel(data) {
     name: data.name,
     package: data.package,
     registers: data.registers,
-    blocks: data.blocks
+    blocks: data.blocks,
+    additionalComponent : data.additionalComponent
   });
 
   return model.save();

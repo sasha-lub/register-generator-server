@@ -3,14 +3,16 @@ const mongoose = require('mongoose');
 const RegisterModelSchema = new mongoose.Schema({
   name : String,
   package : String,
-  generateAgent : Boolean,
-  generateEnv : Boolean,
-  generateDriver : Boolean,
-  generateAdapter : Boolean,
-  generateTransaction : Boolean,
-  generateSequence : Boolean,
-  generateSequencer: Boolean,
-  generateTest : Boolean,
+  additionalComponent : {
+    generateAgent: Boolean,
+    generateEnv: Boolean,
+    generateDriver: Boolean,
+    generateAdapter: Boolean,
+    generateTransaction: Boolean,
+    generateSequence: Boolean,
+    generateSequencer: Boolean,
+    generateTest: Boolean
+  },
   registers : [{
     name : String,
     coverageMode : String,
