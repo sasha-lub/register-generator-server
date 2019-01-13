@@ -32,6 +32,7 @@ const RegisterModelSchema = new mongoose.Schema({
   }],
   blocks : [{
     name : String,
+    coverageMode : String,
     map : {
       name : String,
       offset : String,
@@ -44,11 +45,11 @@ const RegisterModelSchema = new mongoose.Schema({
       size : Number
     },
     fields : [{
-      type : String,
+      fieldType : String,
       name : String,
       offset : String,
       access : String,
-      dimension : Number,
+      dimension : Number
     }]
   }]
 

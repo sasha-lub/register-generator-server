@@ -27,6 +27,9 @@ function deleteModel(id) {
 }
 
 function createModel(data) {
+
+  console.log(data);
+
   const model = new RegisterModel({
     name: data.name,
     package: data.package,
