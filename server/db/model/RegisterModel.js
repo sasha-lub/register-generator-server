@@ -52,7 +52,7 @@ const RegisterModelSchema = new mongoose.Schema({
       access : String,
       dimension : Number,
       size : Number
-    }]
+    }],
     blockFields : [{
       fieldType : String,
       name : String,
