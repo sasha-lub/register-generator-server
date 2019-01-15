@@ -11,7 +11,8 @@ const RegisterModelSchema = new mongoose.Schema({
     generateTransaction: Boolean,
     generateSequence: Boolean,
     generateSequencer: Boolean,
-    generateTest: Boolean
+    generateTest: Boolean,
+    generateTop: Boolean
   },
   registers : [{
     name : String,
@@ -44,12 +45,21 @@ const RegisterModelSchema = new mongoose.Schema({
       offset : String,
       size : Number
     },
-    fields : [{
+    regFields : [{
       fieldType : String,
       name : String,
       offset : String,
       access : String,
-      dimension : Number
+      dimension : Number,
+      size : Number
+    }]
+    blockFields : [{
+      fieldType : String,
+      name : String,
+      offset : String,
+      access : String,
+      dimension : Number,
+      size : Number
     }]
   }]
 
